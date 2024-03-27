@@ -11,26 +11,34 @@ namespace LP.Domain.Entities.Base
     /// </summary>
     public class Person
     {
+        public Person()
+        {
+            Id = Guid.NewGuid();
+            FirstName = "Fname";
+            LastName = "Lname";
+            Address = "Unknown";
+            Age = null;
+        }
         /// <summary>
         /// Уникальный идентификатор сущности
         /// </summary>
         public Guid Id { get; set; }
 
         /// <summary>
+        /// Фамилия человека
+        /// </summary>
+        public required string FirstName { get; set; }
+        /// <summary>
         /// Имя человека
         /// </summary>
-        public string Name { get; set; }
+        public required string LastName { get; set; }
         /// <summary>
         /// Адрес проживания
         /// </summary>
         public string Address { get; set; }
         /// <summary>
-        /// Место работы
-        /// </summary>
-        public string PlaceOfWork { get; set; }
-        /// <summary>
         /// Возраст человека
         /// </summary>
-        public int Age { get; set; }
+        public int? Age { get; set; }
     }
 }

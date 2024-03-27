@@ -15,11 +15,11 @@ namespace LP.Domain.Entities
         /// <summary>
         /// Основная оценка: 2- неуспевающий ... 5- отличник
         /// </summary>
-        public int MajorScore { get; set; }
+        public short MajorScore { get; set; }
         /// <summary>
-        /// Степень ленивости студента (в %)
+        /// Группа
         /// </summary>
-        public float? LazyCoefficient { get; set; }
+        public required string Group { get; set; }
         /// <summary>
         /// Факультет, на котором он обучается
         /// </summary>

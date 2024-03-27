@@ -10,16 +10,16 @@ namespace LP.Domain.Entities
     /// <summary>
     /// Класс преподавателя
     /// </summary>
-    internal class Educator:Person
+    public class Educator:Person
     {
         /// <summary>
         /// Должность преподавателя
         /// </summary>
-        public string Appointment { get; set; }
+        public required string Appointment { get; set; }
         /// <summary>
         /// Кафедра преподавателя
         /// </summary>
-        public string Department { get; set; }
+        public required string Department { get; set; }
         /// <summary>
         /// Стаж преподавателя
         /// </summary>

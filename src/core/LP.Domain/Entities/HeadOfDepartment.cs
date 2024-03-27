@@ -15,7 +15,7 @@ namespace LP.Domain.Entities
         /// <summary>
         /// Кафедра, которой заведует
         /// </summary>
-        public string Department { get; set; }
+        public required string Department { get; set; }
         /// <summary>
         /// Количество сотрудников в подчинении
         /// </summary>
