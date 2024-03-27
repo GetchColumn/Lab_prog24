@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 
 namespace LP.Infrastructure.Persistence.Repositories
 {
-    public class StudentRepository:BaseRepository<Student>,IStudentRepository
+    public class HeadOfDRepository:BaseRepository<HeadOfDepartment>, IHeadOfDRepository
     {
-        public List<Student> GetList(string name)
+        public List<HeadOfDepartment> GetList(string name)
         {
             if (string.IsNullOrEmpty(name))
             {
-                return new List<Student>();
+                return new List<HeadOfDepartment>();
             }
             //LINQ
             return _objectList.
-                Where(student => student.
+                Where(headofd => headofd.
             Name.ToLower().StartsWith(name.ToLower())).ToList();
         }
     }

@@ -15,14 +15,14 @@ namespace LP.Domain.Entities
         /// <summary>
         /// Кафедра, которой заведует
         /// </summary>
-        public required string Department { get; set; }
+        public string Department { get; set; }
         /// <summary>
         /// Количество сотрудников в подчинении
         /// </summary>
-        public long NumOfEmployees { get; set; }
+        public long? NumOfEmployees { get; set; }
         /// <summary>
         /// Стаж работы
         /// </summary>
-        public int WorkExperience { get; set; }
+        public int? WorkExperience { get; set; }
     }
 }

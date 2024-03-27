@@ -15,15 +15,15 @@ namespace LP.Domain.Entities
         /// <summary>
         /// Должность преподавателя
         /// </summary>
-        public required string Appointment { get; set; }
+        public string Appointment { get; set; }
         /// <summary>
         /// Кафедра преподавателя
         /// </summary>
-        public required string Department { get; set; }
+        public string Department { get; set; }
         /// <summary>
         /// Стаж преподавателя
         /// </summary>
-        public int WorkExperience { get; set; }
+        public int? WorkExperience { get; set; }
 
     }
 }
