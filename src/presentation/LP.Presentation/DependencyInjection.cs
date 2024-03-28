@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LP.Infrastructure;
+using LP.Presentation.HostedServices;
 
 namespace LP.Presentation
 {
@@ -21,8 +22,7 @@ namespace LP.Presentation
 
             await host.RunAsync();
         }
-        public static IServiceCollection AddHostedServiceWorker(this IServiceCollection
-            services)
+        public static IServiceCollection AddHostedServiceWorker(this IServiceCollection services)
         {
             services.AddHostedService<HostedServiceWorker>();
             return services;

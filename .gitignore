@@ -468,3 +468,4 @@ package-lock.json
 
 # Для проектов, использующих TypeScript, игнорировать файлы определений TypeScript
 *.tsbuildinfo
+src/presentation/LP.Presentation/Properties/launchSettings.json
