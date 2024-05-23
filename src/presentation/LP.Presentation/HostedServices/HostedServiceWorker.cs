@@ -55,25 +55,29 @@ namespace LP.Presentation.HostedServices
                         switch (choice.KeyChar)
                         {
                               case '1':
-                                Console.WriteLine("Укажите имя объекта: ");
-                                var newStud = StudentUtilities.Create(Console.ReadLine() ?? "");
+                                Console.WriteLine("Укажите данные объекта: Имя, возраст, адрес, факультет, курс, оценку, группу ");
+                                //var newStud = StudentUtilities.Create(Console.ReadLine() ?? "");
+                                var newStud = StudentUtilities.Create(Console.ReadLine() ?? "", Int32.Parse(Console.ReadLine()), Console.ReadLine()
+                                    , Console.ReadLine(), Int32.Parse(Console.ReadLine()), short.Parse(Console.ReadLine()), Console.ReadLine());
                                 Console.WriteLine($"Создан студент Id: {newStud.Id}, Name= {newStud.Name}");
                                 _studentService.Add(newStud);
                                 DataList.Add(newStud);
                                 break;
 
                               case '2':
-                                Console.WriteLine("Укажите имя объекта: ");
-                                var newEduc = EducatorUtilities.Create(Console.ReadLine() ?? "");
-                                Console.WriteLine($"Создан студент Id: {newEduc.Id}, Name= {newEduc.Name}");
+                                Console.WriteLine("Укажите данные объекта: Имя, возраст, адрес, должность, кафедра, опыт работы");
+                                //var newEduc = EducatorUtilities.Create(Console.ReadLine() ?? "");
+                                var newEduc = EducatorUtilities.Create(Console.ReadLine() ?? "", Int32.Parse(Console.ReadLine()),Console.ReadLine(), Console.ReadLine(),
+                                    Console.ReadLine(),Int32.Parse(Console.ReadLine()));
+                                Console.WriteLine($"Создан преподаватель Id: {newEduc.Id}, Name= {newEduc.Name}");
                                 _educatorService.Add(newEduc);
                                 DataList.Add(newEduc);
                                 break;
 
                               case '3':
-                                Console.WriteLine("Укажите имя объекта: ");
+                                Console.WriteLine("Укажите данные объекта: ");
                                 var newHead = HeadOfDUtilities.Create(Console.ReadLine() ?? "");
-                                Console.WriteLine($"Создан студент Id: {newHead.Id}, Name= {newHead.Name}");
+                                Console.WriteLine($"Создан заведущий Id: {newHead.Id}, Name= {newHead.Name}");
                                 _headofdService.Add(newHead);
                                 DataList.Add(newHead);
                                 break;

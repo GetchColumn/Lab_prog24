@@ -11,10 +11,10 @@ namespace LP.Infrastructure.Persistence.Repositories.Base
     public class BaseRepository<T>:IBaseRepository<T> where T : Person
     {
         protected static List<T> _objectList = new List<T>();
-        public T Add(T student)
+        public T Add(T person)
         {
-            _objectList.Add(student);
-            return student;
+            _objectList.Add(person);
+            return person;
         }
 
         public T? GetById(Guid Id)
@@ -24,19 +24,19 @@ namespace LP.Infrastructure.Persistence.Repositories.Base
                 Where(m => m.Id == Id).FirstOrDefault();
         }
 
-        public void Remove(T student)
+        public void Remove(T person)
         {
-            _objectList.Remove(student);
+            _objectList.Remove(person);
         }
 
-        public T Update(T student)
+        public T Update(T person)
         {
-            var index = _objectList.IndexOf(student);
+            var index = _objectList.IndexOf(person);
             if (index >= 0)
             {
-                return _objectList[index] = student;
+                return _objectList[index] = person;
             }
-            return student;
+            return person;
         }
     }
 }

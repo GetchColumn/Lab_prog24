@@ -13,14 +13,14 @@ namespace LP.Infrastructure.Persistence.Repositories
     {
         public List<HeadOfDepartment> GetList(string name)
         {
-            if (string.IsNullOrEmpty(name))
-            {
-                return new List<HeadOfDepartment>();
-            }
+            //if (string.IsNullOrEmpty(name))
+            //{
+            //    return new List<HeadOfDepartment>();
+            //}
             //LINQ
             return _objectList.
                 Where(headofd => headofd.
-            Name.ToLower().StartsWith(name.ToLower())).ToList();
+            Name.ToLower().StartsWith((name ?? "").ToLower())).ToList();
         }
     }
 }

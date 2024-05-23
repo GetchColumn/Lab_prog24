@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:LP.MAUIClient.ViewModels.Educators"
+             x:Class="LP.MAUIClient.Pages.Educators.AddEducatorPage"
+             Title="AddEducatorPage"
+             x:DataType="viewModels:AddEducatorViewModel">
+    <ScrollView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition   Width="300"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+
+            <Label Grid.Column="0" Grid.Row="0" Margin="10,0,0,0" HorizontalOptions="StartAndExpand"  Text="Имя"  Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2"/>
+            <Entry Grid.Column="1" Grid.Row="0" Text="{Binding Educator.Name}" />
+
+            <Label Grid.Column="0" Grid.Row="1" Margin="10,0,0,0" HorizontalOptions="StartAndExpand"  Text="Адрес"  Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2"/>
+            <Entry Grid.Column="1" Grid.Row="1" Text="{Binding Educator.Address}" />
+
+            <Label Grid.Column="0" Grid.Row="2" Margin="10,0,0,0" HorizontalOptions="StartAndExpand"  Text="Возраст"  Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2"/>
+            <Entry Grid.Column="1" Grid.Row="2"  Text="{Binding Educator.Age}" />
+
+            <Label Grid.Column="0" Grid.Row="3" Margin="10,0,0,0" HorizontalOptions="StartAndExpand"  Text="Должность"  Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2"/>
+            <Entry Grid.Column="1" Grid.Row="3"  Text="{Binding Educator.Appointment}" />
+
+            <Label Grid.Column="0" Grid.Row="4" Margin="10,0,0,0" HorizontalOptions="StartAndExpand"  Text="Факультет"  Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2"/>
+            <Entry Grid.Column="1" Grid.Row="4"  Text="{Binding Educator.Department}" />
+
+            <Label Grid.Column="0" Grid.Row="5" Margin="10,0,0,0" HorizontalOptions="StartAndExpand"  Text="Опыт работы"  Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2"/>
+            <Entry Grid.Column="1" Grid.Row="5"  Text="{Binding Educator.WorkExperience}" />
+
+            <Button Grid.Column="0" Grid.Row="6"
+                 Grid.ColumnSpan="2" 
+                 Text="Добавить" 
+                 SemanticProperties.Hint="Добавить преподавателя"
+                 Command="{Binding AddEducatorCommand}" 
+                 HorizontalOptions="Fill" />
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -14,16 +14,16 @@ namespace LP.Domain.Entities.Base
         /// <summary>
         /// Уникальный идентификатор сущности
         /// </summary>
-        public required Guid Id { get; set; }
+        public Guid Id { get; set; }
 
         /// <summary>
         /// Имя человека
         /// </summary>
-        public required string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
         /// <summary>
         /// Адрес проживания
         /// </summary>
-        public string Address { get; set; }
+        public string? Address { get; set; }
         /// <summary>
         /// Возраст человека
         /// </summary>

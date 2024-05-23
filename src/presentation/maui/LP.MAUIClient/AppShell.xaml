@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="LP.MAUIClient.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:routes="clr-namespace:LP.MAUIClient.Pages.Common" 
+    xmlns:pages="clr-namespace:LP.MAUIClient.Pages" 
+    xmlns:pagesHeadOfD="clr-namespace:LP.MAUIClient.Pages.HeadsOfDepartment"
+    xmlns:pagesEducators="clr-namespace:LP.MAUIClient.Pages.Educators"
+    xmlns:pagesStudents="clr-namespace:LP.MAUIClient.Pages.Students"
+    Title="LP.MAUIClient">
+
+    <FlyoutItem Title="Главная страница" >
+        <Tab>
+            <ShellContent
+       Title="Home"
+       ContentTemplate="{DataTemplate pages:MainPage}"
+       Route="{Static routes:Routes.MainRoute}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Заведующие кафедрой" >
+        <Tab>
+            <ShellContent
+    Title="Heads of Department"
+    ContentTemplate="{DataTemplate pagesHeadOfD:HeadOfDepartmentPage}"
+    Route="{Static routes:Routes.HeadOfDepartmentPageRoute}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Преподаватели" >
+        <Tab>
+            <ShellContent
+    Title="Educators"
+    ContentTemplate="{DataTemplate pagesEducators:EducatorPage}"
+    Route="{Static routes:Routes.EducatorPageRoute}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Студенты" >
+        <Tab>
+            <ShellContent
+    Title="Students"
+    ContentTemplate="{DataTemplate pagesStudents:StudentPage}"
+    Route="{Static routes:Routes.StudentPageRoute}" />
+        </Tab>
+    </FlyoutItem>
+</Shell>

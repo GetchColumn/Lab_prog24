@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:LP.MAUIClient.ViewModels.Students"
+             xmlns:domainModels="clr-namespace:LP.Domain.Entities;assembly=LP.Domain"
+             x:Class="LP.MAUIClient.Pages.Students.StudentPage"
+             x:DataType="viewModels:StudentPageViewModel"
+             Title="Студенты">
+    <VerticalStackLayout HorizontalOptions="FillAndExpand">
+        <Button 
+   Text="Добавить студента" 
+   SemanticProperties.Hint="Добавить студента"
+   Command="{Binding GoToAddStudentCommand}" 
+   HorizontalOptions="Fill" />
+
+        <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+            <Entry WidthRequest="200" Text="{Binding Search}" />
+            <Button 
+                 Text="Поиск" 
+                 SemanticProperties.Hint="Поиск"
+                 Command="{Binding SearchListCommand}" 
+                 HorizontalOptions="Fill" />
+        </HorizontalStackLayout>
+
+        <CollectionView  ItemsSource="{Binding StudentList}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="domainModels:Student" >
+                    <Grid Padding="10" ColumnSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Text="{Binding Name}" HorizontalOptions="CenterAndExpand" FontSize="20" />
+                        <Label Grid.Column="1" Text="{Binding Address}" HorizontalOptions="CenterAndExpand" FontSize="20" />
+                        <Label Grid.Column="2" Text="{Binding Age}" HorizontalOptions="CenterAndExpand" FontSize="20"  />
+                        <Label Grid.Column="3" Text="{Binding MajorScore}" HorizontalOptions="CenterAndExpand" FontSize="20" />
+                        <Label Grid.Column="4" Text="{Binding Group}" HorizontalOptions="CenterAndExpand" FontSize="20" />
+                        <Label Grid.Column="5" Text="{Binding YearOfStudy}" HorizontalOptions="CenterAndExpand" FontSize="20" />
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

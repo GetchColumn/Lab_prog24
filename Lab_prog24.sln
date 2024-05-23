@@ -17,7 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LP.Domain", "src\core\LP.Do
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LP.Infrastructure", "src\infrastructure\LP.Infrastructure\LP.Infrastructure.csproj", "{0734B5F3-D6F1-438D-84FF-AEF8070B14A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LP.Presentation", "src\presentation\LP.Presentation\LP.Presentation.csproj", "{148B1466-AE22-4FD6-B328-A300D7E8E48E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LP.Presentation", "src\presentation\LP.Presentation\LP.Presentation.csproj", "{148B1466-AE22-4FD6-B328-A300D7E8E48E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "maui", "maui", "{87D8E2CE-80EE-4A4C-B008-66E7BA45C7C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LP.MAUIClient", "src\presentation\maui\LP.MAUIClient\LP.MAUIClient.csproj", "{2B467197-87F4-4816-A75D-A149225BF61A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,12 @@ Global
 		{148B1466-AE22-4FD6-B328-A300D7E8E48E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{148B1466-AE22-4FD6-B328-A300D7E8E48E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{148B1466-AE22-4FD6-B328-A300D7E8E48E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B467197-87F4-4816-A75D-A149225BF61A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B467197-87F4-4816-A75D-A149225BF61A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B467197-87F4-4816-A75D-A149225BF61A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2B467197-87F4-4816-A75D-A149225BF61A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B467197-87F4-4816-A75D-A149225BF61A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B467197-87F4-4816-A75D-A149225BF61A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +63,8 @@ Global
 		{410C6377-3E59-4FF6-9922-F6277134B8CC} = {D12DF022-656F-4274-BC65-F4BB4AC711AF}
 		{0734B5F3-D6F1-438D-84FF-AEF8070B14A2} = {54457EB2-7541-45C0-A9A7-9FAA66F1B336}
 		{148B1466-AE22-4FD6-B328-A300D7E8E48E} = {0CDDA152-466F-4E6C-B000-59BF378EFCA3}
+		{87D8E2CE-80EE-4A4C-B008-66E7BA45C7C4} = {0CDDA152-466F-4E6C-B000-59BF378EFCA3}
+		{2B467197-87F4-4816-A75D-A149225BF61A} = {87D8E2CE-80EE-4A4C-B008-66E7BA45C7C4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {251D6955-94FB-446C-8946-DF837923E298}

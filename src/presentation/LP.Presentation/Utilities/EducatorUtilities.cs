@@ -23,5 +23,20 @@ namespace LP.Presentation.Utilities
                 WorkExperience = null
             };
         }
+        public static Educator Create(string name, int age, string address, string appointment, string department
+            , int workexperience)
+        {
+            return new Domain.Entities.Educator()
+            {
+                Name = name,
+                Id = Guid.NewGuid(),
+                Address = address,
+                Age = age,
+
+                Appointment = appointment,
+                Department = department,
+                WorkExperience = workexperience
+            };
+        }
     }
 }

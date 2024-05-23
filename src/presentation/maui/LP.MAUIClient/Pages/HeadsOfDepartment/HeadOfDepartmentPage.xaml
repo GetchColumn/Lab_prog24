@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:LP.MAUIClient.ViewModels.HeadsOfDepartment"
+             xmlns:domainModels="clr-namespace:LP.Domain.Entities;assembly=LP.Domain"
+             x:Class="LP.MAUIClient.Pages.HeadsOfDepartment.HeadOfDepartmentPage"
+             x:DataType="viewModels:HeadOfDViewModel"
+             Title="Заведующие кафедрой">
+    <VerticalStackLayout HorizontalOptions="FillAndExpand">
+        <Button 
+   Text="Добавить заведующего кафедрой" 
+   SemanticProperties.Hint="Добавить заведующего кафедрой"
+   Command="{Binding GoToAddHeadOfDCommand}" 
+   HorizontalOptions="Fill" />
+
+        <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+            <Entry WidthRequest="200" Text="{Binding Search}" />
+            <Button 
+                 Text="Поиск" 
+                 SemanticProperties.Hint="Поиск"
+                 Command="{Binding SearchListCommand}" 
+                 HorizontalOptions="Fill" />
+        </HorizontalStackLayout>
+
+        <CollectionView  ItemsSource="{Binding HeadofdList}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="domainModels:HeadOfDepartment" >
+                    <Grid Padding="10" ColumnSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Text="{Binding Name}" HorizontalOptions="CenterAndExpand" FontSize="20" />
+                        <Label Grid.Column="1" Text="{Binding Address}" HorizontalOptions="CenterAndExpand" FontSize="20" />
+                        <Label Grid.Column="2" Text="{Binding Age}" HorizontalOptions="CenterAndExpand" FontSize="20"  />
+                        <Label Grid.Column="3" Text="{Binding Department}" HorizontalOptions="CenterAndExpand" FontSize="20" />
+                        <Label Grid.Column="4" Text="{Binding NumOfEmployees}" HorizontalOptions="CenterAndExpand" FontSize="20" />
+                        <Label Grid.Column="5" Text="{Binding WorkExperience}" HorizontalOptions="CenterAndExpand" FontSize="20" />
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
